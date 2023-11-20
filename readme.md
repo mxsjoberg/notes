@@ -1,6 +1,6 @@
 # Michael's notes
 
-This page contains my unstructured and unfiltered notes on different topics. Basically learning about stuff in public.
+This is my unstructured notes. Basically learning about stuff in public.
 
 ---
 
