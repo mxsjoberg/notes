@@ -1,8 +1,4 @@
-# Michael's notes
-
 This is my unstructured notes. Basically learning about stuff in public.
-
----
 
 ## High-level observations (AI/ML landscape)
 
