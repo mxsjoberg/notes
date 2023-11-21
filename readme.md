@@ -16,6 +16,8 @@ Midjourney is an end-to-end application using it's own proprietary model. Github
 
 ## Interpreters and compiler runtimes
 
+![compilation.png](compilation.png)
+
 ### Stack vs register-based
 
 ```
