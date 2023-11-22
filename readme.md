@@ -1,5 +1,3 @@
-This is my unstructured notes. Basically learning about stuff in public.
-
 ## High-level observations (AI/ML landscape)
 
 Model training is compute-intensive and model inference is latency-sensitive. More powerful chips result in better models, so demand likely to increase for as long as "better" models justify the cost of training.
