@@ -203,7 +203,7 @@ Linear, add, relu, softmax (and other primitives) often implemented in low-level
 
 ### Other techniques and tools
 
-![dl_compiler_stack.png](https://d3i71xaburhd42.cloudfront.net/69046519775ca6ac40c7d577887149525df2ee5d/10-Figure2-1.png)
+![dl_compiler_stack.png](dl_compiler_stack.png)
 
 - graph optimization
     - constant folding, pruning, dead code elimination
