@@ -121,11 +121,9 @@ The LLVM backend is series of steps performed to translate the LLVM IR to machin
     - Legalized DAG is DAG with only legal operations (e.g., no multiplication)
     - Optimized DAG is DAG with optimized operations (constant folding, dead code elimination)
 - Instruction selection is mapping operations to target-specific instructions (e.g. x86-64 `add` instruction)
-    - Scheduling and emitting instructions (e.g. x86-64 `add` instruction is `addq`)
+    - Instruction scheduling is optimizing order of instructions
 - Register allocation is mapping virtual registers to physical registers (e.g. x86-64 `rax` register)
-- Native code generation is generating machine code (e.g. x86-64 `addq` instruction is `48 83 c0 0a`)
-    - Emitting machine code (e.g. x86-64 `48 83 c0 0a` is `addq $10, %rax`)
-
+- Native code generation is emitting machine code
 
 Compile LLVM IR to specific target with `llc -march=x86-64 main.ll`, see `llc --version` for list of targets.
 
