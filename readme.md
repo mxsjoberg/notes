@@ -108,6 +108,8 @@ define i32 @main() #0 {
 
 Interpret LLVM IR and output result `lli main.ll; echo $?` (output should be `20`). Compile to LLVM bytecode, interpret, and output result `llvm-as main.ll; lli main.bc; echo $?`. Generate object file and execute `llc -filetype=obj main.bc; clang++ main.o -o main; ./main; echo $?`.
 
+<mark>Compile LLVM IR to specific target with `llc -march=x86-64 main.ll`, see `llc --version` for list of targets.</mark>
+
 ## MLIR
 
 LLVM is CPU-focused lower-level optimization back-end for traditional programming languages. MLIR is LLVM for machine learning models (e.g. optimizations on graphs).
