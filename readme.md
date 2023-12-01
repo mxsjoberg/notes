@@ -1,3 +1,5 @@
+<mark>Recently added</mark>: Notes most recently added to this file.
+
 ## High-level observations (AI/ML landscape)
 
 Model training is compute-intensive and model inference is latency-sensitive. More powerful chips result in better models, so demand likely to increase for as long as "better" models justify the cost of training.
@@ -108,7 +110,7 @@ define i32 @main() #0 {
 
 Interpret LLVM IR and output result `lli main.ll; echo $?` (output should be `20`). Compile to LLVM bytecode, interpret, and output result `llvm-as main.ll; lli main.bc; echo $?`. Generate object file and execute `llc -filetype=obj main.bc; clang++ main.o -o main; ./main; echo $?`.
 
-<mark>Compile LLVM IR to specific target with `llc -march=x86-64 main.ll`, see `llc --version` for list of targets.</mark>
+<mark>Recently added</mark> Compile LLVM IR to specific target with `llc -march=x86-64 main.ll`, see `llc --version` for list of targets.
 
 ## MLIR
 
