@@ -1,4 +1,4 @@
-<mark>Recently added</mark>: Notes most recently added to this file.
+Headers with <mark>recently changed</mark> indicate sections that have been updated recently.
 
 ## High-level observations (AI/ML landscape)
 
@@ -110,7 +110,24 @@ define i32 @main() #0 {
 
 Interpret LLVM IR and output result `lli main.ll; echo $?` (output should be `20`). Compile to LLVM bytecode, interpret, and output result `llvm-as main.ll; lli main.bc; echo $?`. Generate object file and execute `llc -filetype=obj main.bc; clang++ main.o -o main; ./main; echo $?`.
 
-<mark>Recently added</mark> Compile LLVM IR to specific target with `llc -march=x86-64 main.ll`, see `llc --version` for list of targets.
+## <mark>recently changed</mark> LLVM "backend"
+
+![llvm_backend.png](llvm_backend.png)
+
+The LLVM backend is series of steps performed to translate the LLVM IR to machine code for a specific target (e.g. x86-64, ARM, WebAssembly):
+
+- LLVM IR is the portable representation in SSA form
+- DAG of operations (graph of operations)
+    - Legalized DAG is DAG with only legal operations (e.g., no multiplication)
+    - Optimized DAG is DAG with optimized operations (constant folding, dead code elimination)
+- Instruction selection is mapping operations to target-specific instructions (e.g. x86-64 `add` instruction)
+    - Scheduling and emitting instructions (e.g. x86-64 `add` instruction is `addq`)
+- Register allocation is mapping virtual registers to physical registers (e.g. x86-64 `rax` register)
+- Native code generation is generating machine code (e.g. x86-64 `addq` instruction is `48 83 c0 0a`)
+    - Emitting machine code (e.g. x86-64 `48 83 c0 0a` is `addq $10, %rax`)
+
+
+Compile LLVM IR to specific target with `llc -march=x86-64 main.ll`, see `llc --version` for list of targets.
 
 ## MLIR
 
